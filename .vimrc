@@ -4,9 +4,9 @@ set nocompatible
 filetype plugin indent on
 
 " settings of encoding
-set encoding=utf-8
-scriptencoding
-set fileencodings
+" set encoding=utf-8
+" scriptencoding
+" set fileencodings
 
 
 " enable delete with backspace
