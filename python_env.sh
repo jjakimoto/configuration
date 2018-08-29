@@ -3,6 +3,8 @@ mkdir Downloads
 cd ~/Downloads
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 bash Anaconda3-5.2.0-Linux-x86_64.sh
+echo "export PATH=$PATH:$HOME/anaconda3/bin" >> ~/.bashrc
+source .bashrc
 
 # Require super user permission
 sudo apt-get install python3-dev
@@ -36,6 +38,7 @@ git config --global credential.helper store
 # Install only from pip
 # pip install tensorflow-gpu
 # pip install GPy
+
 # pip install nltk
 pip install xgboost
 pip install TA-Lib
@@ -59,9 +62,8 @@ pip install gensim
 # cd GPflow 
 # python setup.py develop
 # echo "PATH='~/library/GPflow:$PATH'" >> ~/.bashrc
-echo "export PATH=$PATH:$HOME/anaconda3/bin" >> ~/.bashrc
 source ~/.bashrc
 
 mv -f ~/Downloads/ta-lib ~/library/
 rm -rf ~/Downloads/Anaconda3-4.3.1-Linux-x86_64.sh
-rm -rf ~/Downloads/ta-lib-0.4.0-src.tar.gz
+rm -rf ~/Downloads/ta-lib-1.4.0-src.tar.gz
