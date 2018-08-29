@@ -37,6 +37,7 @@ git config --global credential.helper store
 # pip install tensorflow-gpu
 # pip install GPy
 # pip install nltk
+pip install msgpack
 pip install xgboost
 pip install TA-Lib
 pip install tqdm
