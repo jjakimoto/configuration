@@ -1,3 +1,7 @@
+# Install cmake
+sudo apt-get install build-essential cmake
+sudo apt-get install python-opengl
+
 # install Anaconda
 mkdir Downloads
 cd ~/Downloads
