@@ -1,9 +1,15 @@
+# install Anaconda
+mkdir Downloads
+cd ~/Downloads
+wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+bash Anaconda3-5.2.0-Linux-x86_64.sh
+
 # Require super user permission
 sudo apt-get install python3-dev
 sudo apt-get install enchant
 sudo apt-get install libcupti-dev
 conda install libgcc
-cd ~/Downloads
+# cd ~/Downloads
 wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
 tar -zxvf ta-lib-0.4.0-src.tar.gz
 cd ta-lib
@@ -12,8 +18,10 @@ make
 sudo make install
 
 # install Anaconda
-curl -O https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64h
-bash Anaconda3-4.3.1-Linux-x86_64.sh
+cd ~/Downloads
+wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+bash Anaconda3-5.2.0-Linux-x86_64.sh
+
 cd ~
 source .bashrc
 jupyter notebook --generate-config
@@ -26,31 +34,32 @@ git config --global user.name "jjakimoto"
 git config --global credential.helper store
 
 # Install only from pip
-pip install tensorflow-gpu
-pip install GPy
-pip install nltk
+# pip install tensorflow-gpu
+# pip install GPy
+# pip install nltk
 pip install xgboost
 pip install TA-Lib
 pip install tqdm
 pip install gensim
-pip install google-compute-engine
+# pip install google-compute-engine
 
 # Small Thried Party
-pip install pykalman
-pip install hmmlearn 
-pip install https://github.com/JamesRitchie/scikit-rvm/archive/master.zip
+# pip install pykalman
+# pip install hmmlearn 
+# pip install https://github.com/JamesRitchie/scikit-rvm/archive/master.zip
 
 # From source
-pip install pyenchant
+# pip install pyenchant
 
 # Make directry in case
 
-mkdir ~/library
-cd ~/library
-git clone https://github.com/GPflow/GPflow.git
-cd GPflow 
-python setup.py develop
-echo "PATH='~/library/GPflow:$PATH'" >> ~/.bashrc
+# mkdir ~/library
+# cd ~/library
+# git clone https://github.com/GPflow/GPflow.git
+# cd GPflow 
+# python setup.py develop
+# echo "PATH='~/library/GPflow:$PATH'" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/anaconda3/bin" >> ~/.bashrc
 source ~/.bashrc
 
 mv -f ~/Downloads/ta-lib ~/library/
